@@ -5,6 +5,9 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var sass = require('node-sass-middleware');
+// uploader
+var multer  = require('multer');
+
 
 module.exports = function() {
   var app = express();
@@ -13,6 +16,9 @@ module.exports = function() {
 		extended:true
 	}));
 	app.use(bodyParser.json());
+  // upload
+
+
 
   app.set('views', './views');
   app.set('view engine', 'jade');
